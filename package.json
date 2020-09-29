@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "autoprefixer": "^9",
+    "postcss-cli": "^8.0.0",
+    "tailwindcss": "^1.8.10"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "dev": "concurrently \"postcss node_modules/tailwindcss/tailwind.css -o ./public/tailwind.css -w\" \"live-server ./public\"",
+    "build": "NODE_ENV=production postcss node_modules/tailwindcss/tailwind.css -o ./public/tailwind.css"
+  }
+}
